@@ -1,0 +1,279 @@
+## Daily Job Digest — Staff / Senior SWE — India (Bangalore, Hyderabad and Pune)
+
+
+
+**Objective:** Find and email the top 15 currently open Staff Engineer and Senior Software Engineer jobs at AI companies, unicorn startups, and top tech firms in the India (Bangalore, Hyderabad and Pune focused). Send via Chrome (not just draft).
+
+
+
+**User:** Darshil Bhayani — darshilbhayani92@gmail.com
+
+
+
+---
+
+
+
+### Step 1: Run 2 targeted web searches (no page fetches)
+
+
+
+**Search 1 — Job aggregator platforms (AI/startup companies):**
+
+```
+
+"senior software engineer" OR "staff engineer" site:greenhouse.io OR site:lever.co OR site:ashbyhq.com AI OR "machine learning" OR LLM 2026
+
+```
+
+
+
+**Search 2 — Big Tech companies with proprietary job boards:**
+
+```
+
+"senior software engineer" OR "staff engineer" jobs 2026 site:careers.google.com OR site:metacareers.com OR site:amazon.jobs OR site:microsoft.com/careers OR site:apple.com/jobs OR site:stripe.com/jobs OR site:openai.com/careers OR site:anthropic.com/careers
+
+```
+
+
+
+**Rules:**
+
+- ✅ Extract company name, job title, and direct URL from search result snippets only
+
+- ✅ Combine results from both searches into one list
+
+- ❌ Do NOT fetch any individual company career page or job posting URL
+
+- ❌ Do NOT run more than 2 searches
+
+
+
+---
+
+
+
+### Step 2: Compile top 15 results
+
+
+
+Rank by priority:
+
+1. **AI-first companies** (Anthropic, OpenAI, Mistral, Perplexity, Together AI, Scale AI, Cohere, Hugging Face, Character.ai, xAI, etc.)
+
+2. **Emerging AI unicorns** ($1B+ valuation AI/ML startups from 2024–2026: Harvey, Sierra, Poolside, Magic, Cognition, etc.)
+
+3. **Top-tier tech giants** (Google, Meta, Apple, Microsoft, Amazon, Stripe, Databricks, Snowflake, Nvidia, etc.)
+
+
+
+---
+
+
+
+### Step 3: Create rich HTML email draft via Gmail MCP
+
+
+
+Use tool: `mcp__1f8d0890-717b-4d71-bd50-8024bcb9489c__gmail_create_draft`
+
+
+
+- **To:** darshilbhayani92@gmail.com
+
+- **Subject:** `🇺🇸 Top 15 Staff/Senior SWE Jobs — India (Bangalore, Hyderabad and Pune) | {Today's Date}`
+
+- **contentType:** text/html
+
+- **Body:** Full rich HTML email with:
+
+
+
+```html
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <style>
+
+    body { font-family: Arial, sans-serif; font-size: 14px; color: #1a1a1a; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+
+    h2 { color: #1a56db; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px; }
+
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+
+    th { background-color: #1a56db; color: white; padding: 10px 12px; text-align: left; font-size: 13px; }
+
+    td { padding: 9px 12px; border-bottom: 1px solid #e5e7eb; font-size: 13px; vertical-align: top; }
+
+    tr:nth-child(even) { background-color: #f9fafb; }
+
+    tr:hover { background-color: #eff6ff; }
+
+    a { color: #1a56db; text-decoration: none; }
+
+    .badge-staff { background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; }
+
+    .badge-senior { background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; }
+
+    .tip-box { background: #fff7ed; border-left: 4px solid #ea580c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+
+  </style>
+
+</head>
+
+<body>
+
+  <p>Hi Darshil 👋,</p>
+
+  <p>Here's your <strong>India (Bangalore, Hyderabad and Pune) job digest for {DATE}</strong> — top 15 Staff / Senior SWE roles at AI companies, unicorns, and top tech firms.</p>
+
+  <h2>📋 Top 15 Jobs — Staff / Senior SWE | India (Bangalore, Hyderabad and Pune)</h2>
+
+  <table>
+
+    <tr><th>#</th><th>Company</th><th>Role</th><th>Level</th><th>Direct Apply Link</th></tr>
+
+    [INSERT ROWS HERE — one per company]
+
+  </table>
+
+  <div class="tip-box">⏱️ <strong>Apply within 24–48 hours</strong> of posting — applicant pools are smallest in the first 2 days. For older listings, verify the role is still active before investing time.</div>
+
+  <h2>💡 Quick Tips for India (Bangalore, Hyderabad and Pune) Applications</h2>
+
+  <ul>
+
+    <li><strong>Referrals first:</strong> Search LinkedIn for 1st/2nd degree connections at each company above and send a short referral ask.</li>
+
+    <li><strong>Greenhouse/Lever links:</strong> These are direct apply — no account needed on most.</li>
+
+    <li><strong>Visa note:</strong> Most AI startups and Big Tech sponsor H1B. Mention TN/OPT status early if applicable to avoid wasted rounds.</li>
+
+  </ul>
+
+  <hr/>
+
+  <p style="font-size:12px; color:#6b7280;">This digest runs automatically every weekday morning at 8:10 AM.<br/>— Daily Job Digest Agent | India (Bangalore, Hyderabad and Pune)</p>
+
+</body>
+
+</html>
+
+```
+
+
+
+Save the returned `draftId` for the next step.
+
+
+
+---
+
+
+
+### Step 4: Send the email via Chrome (REQUIRED — do not skip)
+
+
+
+After creating the draft, use Chrome to actually send it:
+
+
+
+1. Use `mcp__Claude_in_Chrome__tabs_context_mcp` with `createIfEmpty: true` to get a tab ID
+
+2. Navigate to `https://mail.google.com/mail/u/0/#drafts` using `mcp__Claude_in_Chrome__navigate`
+
+3. Wait 2 seconds, then use `mcp__Claude_in_Chrome__javascript_tool` to find and click the draft:
+
+```javascript
+
+const rows = document.querySelectorAll('tr.zA');
+
+let targetRow = null;
+
+for (const row of rows) {
+
+  if (row.innerText?.includes('Bay Area')) {
+
+    targetRow = row;
+
+    break;
+
+  }
+
+}
+
+if (targetRow) { targetRow.click(); 'Clicked draft row'; }
+
+else { rows[0]?.click(); 'Clicked first row as fallback'; }
+
+```
+
+4. Wait 2 seconds for compose window to open, then click Send:
+
+```javascript
+
+const allButtons = document.querySelectorAll('[role="button"], button');
+
+let sendBtn = null;
+
+for (const btn of allButtons) {
+
+  const tooltip = btn.getAttribute('data-tooltip') || '';
+
+  const label = btn.getAttribute('aria-label') || '';
+
+  if (tooltip.includes('Send') || label.includes('Send')) {
+
+    sendBtn = btn;
+
+    break;
+
+  }
+
+}
+
+if (sendBtn) {
+
+  const evt = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
+
+  sendBtn.dispatchEvent(evt);
+
+  'Clicked send';
+
+} else { 'Send button not found'; }
+
+```
+
+5. Verify by checking for "Message sent" toast:
+
+```javascript
+
+const toasts = Array.from(document.querySelectorAll('span, div')).filter(el => el.innerText?.trim() === 'Message sent');
+
+toasts.length > 0 ? 'Email sent successfully!' : 'Toast not found — may still have sent';
+
+```
+
+
+
+---
+
+
+
+### Step 5: Confirm back to user
+
+
+
+After sending, report:
+
+- ✅ Email sent to darshilbhayani92@gmail.com
+
+- How many were direct job posting links vs. career page links
+
+- Any standout AI-first or newly posted roles worth acting on fast
